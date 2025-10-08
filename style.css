@@ -100,10 +100,11 @@ section p {
   border-right: 5px solid #8b0900;
   white-space: nowrap;
   letter-spacing: 0.1em;
-  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+  animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite, glow 2s ease-in-out infinite alternate;
   font-size: 3rem;
   font-weight: bold;
-  color: #9e0b00;
+  color: #ff4d4d;
+  text-shadow: 0 0 10px #ff0000, 0 0 20px #ff4d4d, 0 0 40px #ff1a1a;
 }
 
 @keyframes typing {
@@ -122,6 +123,15 @@ section p {
   }
   50% {
     border-color: #911007;
+  }
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ff1a1a, 0 0 10px #ff4d4d, 0 0 20px #ff6666;
+  }
+  to {
+    text-shadow: 0 0 20px #ff4d4d, 0 0 40px #ff1a1a, 0 0 60px #ff0000;
   }
 }
 
